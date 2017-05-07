@@ -2,3 +2,42 @@
   box-sizing: border-box
 html, body
   background: $color-background
+  overflow-x: hidden
+
+.container
+  width: 1128px
+  marging: 0 auto
+  +clearfix
+
+.row
+  margin-left: -12px
+  margin-right: -12px
+
+.column
+  width: 144px
+  float: left
+  padding-left: 12px
+  padding-right: 12px
+  overflow: hidden
+  background: #1ba1fc
+  height: 100px
+  .first
+    padding-left: 0px
+  .last
+    padding-right: 0px
+  .column-1
+    width: 144px
+  .column-2
+    width: (144px * 2)
+  .column-3
+    width: (144px * 3)
+  .column-4
+    width: (144px * 4)
+  .column-5
+    width: (144px * 5)
+  .column-6
+    width: (144px * 6)
+  .column-7
+    width: (144px * 7)
+  .column-8
+    width: (144px * 8)
