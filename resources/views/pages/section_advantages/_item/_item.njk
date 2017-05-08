@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="column-4 column-offset-left-{{ item.offset }}">
+        <div class="row">
+            <div class="our-advantages__item">
+                <div class="our-advantages__item-count" style="background-image: url('{{ item.imageUrl }}')"></div>
+                <div class="our-advantages__item-text">
+                    <p>
+                        {{ item.text | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

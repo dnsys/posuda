@@ -1,0 +1,34 @@
+<section class="section section--light">
+    <div class="our-advantages">
+        <div class="container">
+            <h2 class="our-advantages__title">
+                Преимущества нашей работы
+            </h2>
+            {% set items = [
+            {
+                offset: 3,
+                imageUrl: './images/count-item/1.png',
+                text: 'Мы поставляем посуду напрямую с завода, что позволяет гарантировать низкие цены и высокое качество продукции.'
+            },
+            {
+                offset: 1,
+                imageUrl: './images/count-item/2.png',
+                text: 'Наша посуда для ресторана будет идеальным дополнением. Уверены, что ваши посетителе по достоинству оценят качество и эксклюзивность посуды.'
+            },
+            {
+                offset: 3,
+                imageUrl: './images/count-item/3.png',
+                text: 'Мы поставляем посуду оптом в Москве, но в том числе работаем со всеми регионами РФ.'
+            },
+            {
+                offset: 1,
+                imageUrl: './images/count-item/4.png',
+                text: 'Вся посуда произведена из высококачественных материалов,<br/>опала и фарфора.'
+            }
+            ] %}
+            {% for item in items %}
+                {% include 'pages/section_advantages/_item/_item.njk' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

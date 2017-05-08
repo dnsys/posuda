@@ -158,10 +158,10 @@ gulp.task('watch:fonts', ['fonts'], function (done) {
 });
 gulp.task('browserSync', function() {
     browserSync.init({
-        /*server: {
+        server: {
          baseDir: build,
-         },*/
-        proxy: 'LOCAL_HOST'
+         },
+        //proxy: 'LOCAL_HOST'
     });
 });
 const revVersion = function(){

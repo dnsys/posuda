@@ -1,0 +1,32 @@
+<section class="section section--light">
+    <div class="guarantee">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 90px">Гарантия</h2>
+            <div class="row">
+                {% set items = [
+                    {
+                        offset: 'column-offset-left-1',
+                        imageUrl: './images/icons/hand.png',
+                        title: 'Возврат средств',
+                        text: 'Мы гарантируем возврат<br/>средств при бла бла<br/>блаблабла бла бла.'
+                    },
+                    {
+                        offset: '',
+                        imageUrl: './images/icons/truck.png',
+                        title: 'Быстрая доставка',
+                        text: 'Мы быстро доставим ваш<br/>заказ до вашей двери.'
+                    },
+                    {
+                        offset: '',
+                        imageUrl: './images/icons/people.png',
+                        title: 'Помощь',
+                        text: 'Поможем в выборе и на<br/>любой стадии заказа.'
+                    }
+                ] %}
+                {% for item in items %}
+                    {% include 'pages/section_guarantee/_item/_item.njk' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

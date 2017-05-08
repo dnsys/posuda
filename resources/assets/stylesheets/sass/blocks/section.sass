@@ -1,7 +1,38 @@
 .section
+  position: relative
   &--dark
-    h1, h2, span, p
-      color: #000000
-  &--light
-    h1, h2, span, p
+    h1, h2, p
       color: #ffffff
+  &--light
+    h1, h2, p
+      color: #000000
+  &--main
+    height: 950px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: bottom left
+    margin-top: -75px
+  &--we-have
+    background-position: center
+    background-size: cover
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: $color-dark-blue
+      opacity: .9
+  &--table
+    display: table
+    table-layout: fixed
+    width: 100%
+  &--tableCell
+    display: table-cell
+    vertical-align: middle
+    width: 100%
+
+  &--call-to-action
+    background: $color-dark-blue

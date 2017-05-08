@@ -1,11 +1,13 @@
 {% extends "layouts/layout.njk" %}
 
 {% block content %}
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
-    <div class = "column column-1"></div>
+    {% include "pages/section_main/section_main.njk" %}
+    {% include "pages/section_advantages/section_advantages.njk" %}
+    {% include "pages/section_guarantee/section_guarantee.njk" %}
+    {% include "pages/section_call-to-action/section_call-to-action.njk" %}
+    {% include "pages/section_how-we-work/section_how-we-work.njk" %}
+    {% include "pages/section_we-have/section_we-have.njk" %}
+    {% include "pages/section_reviews/section_reviews.njk" %}
+    {% include "pages/section_partners/section_partners.njk" %}
+    {% include "pages/section_for-partners/section_for-partners.njk" %}
 {% endblock %}

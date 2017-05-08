@@ -1,0 +1,45 @@
+.header
+  position: relative
+  background: $color-dark-blue
+  font-size: 0px
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.16), 1px 2px 5px 0px rgba(0, 0, 0, 0.26)
+  z-index: 100
+  +clearfix
+  &__elem
+    display: inline-block
+    vertical-align: middle
+  &__logo
+    font-family: 'RobotoSlab Bold', sans-serif
+    font-size: 18px
+    text-align: left
+    text-transform: uppercase
+    color: #ffffff
+    padding: 25px 0px
+  &__main-menu
+    margin-left: 245px
+    font-size: 0px
+  &__nav
+    li
+      display: inline-block
+      border-left: 1px solid #1f1f25
+      width: 119px
+      text-align: center
+      &:last-child
+        border-right: 1px solid #1f1f25
+    a
+      font-size: 16px
+      line-height: 24px
+      display: inline-block
+      color: $base-color-red
+      text-decoration: none
+      padding: 25px 0px
+      &:hover
+        text-decoration: none
+  &__tel
+    margin-left: 50px
+    a
+      font-family: 'Ubuntu Bold', sans-serif
+      font-size: 30px
+      color: #ffffff
+      line-height: 24px
+      text-decoration: none
