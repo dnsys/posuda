@@ -1,0 +1,14 @@
+<div class="block-reviews__item">
+    <div class="block-reviews__item-image" style="background-image: url('{{ item.imageUrl }}')"></div>
+    <div class="block-reviews__item-info">
+        <div class="block-reviews__item-name">
+            {{ item.name }}
+        </div>
+        <div class="block-reviews__item-place">
+            {{ item.place | safe }}
+        </div>
+    </div>
+    <div class="block-reviews__text">
+        {{ item.text }}
+    </div>
+</div>
