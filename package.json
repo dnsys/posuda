@@ -26,6 +26,7 @@
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "babel-polyfill": "^6.23.0",
     "babelify": "^7.3.0",
     "browserify": "^14.1.0",

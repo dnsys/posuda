@@ -6,12 +6,13 @@ let owlCarousel = require('owl.carousel');
 class ReviewsBlock{
     constructor () {
         console.log('inside');
-        $('.reviews-carousel').owlCarousel({
-            dots: true,
+        $('.partners-carousel').owlCarousel({
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut',
             center: true,
-            loop: false,
-            margin: 24,
-            autoWidth: true
+            items:7,
+            loop:true,
+            margin:24
         });
     }
 }
