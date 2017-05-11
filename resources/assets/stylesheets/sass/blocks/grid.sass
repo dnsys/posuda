@@ -1,9 +1,12 @@
 .container
-  width: 1152px
+  max-width: 1152px
   padding-left: 12px
   padding-right: 12px
   margin: 0 auto
   +clearfix
+  +media-880
+    padding-left: 12%
+    padding-right: 12%
 
 .row
   margin-left: -12px
@@ -18,10 +21,14 @@ $col-with: 100% / $col-count
     padding-left: 12px
     padding-right: 12px
     width: $col-with * $i
+    +media-320
+      width: 100%
 
 @for $i from 1 through $col-count
   .column-offset-left-#{$i}
     margin-left: $col-with * $i
+    +media-320
+      margin-left: 0px
 
 @for $i from 1 through $col-count
   .column-offset-right-#{$i}

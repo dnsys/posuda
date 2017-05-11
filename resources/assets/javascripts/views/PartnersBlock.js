@@ -7,12 +7,20 @@ class ReviewsBlock{
     constructor () {
         console.log('inside');
         $('.partners-carousel').owlCarousel({
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            center: true,
+            // center: true,
+            // items: 7,
+            // loop: true,
+            // margin: 24,
+            // autoplay: true,
+            // autoplayTimeout: 500,
+            // autoplaySpeed: 5000
             items:7,
             loop:true,
-            margin:24
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:500,
+            autoplayHoverPause:true,
+            autoplaySpeed: 5000
         });
     }
 }

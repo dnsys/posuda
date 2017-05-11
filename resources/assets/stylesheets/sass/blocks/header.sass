@@ -4,6 +4,7 @@
   font-size: 0px
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.16), 1px 2px 5px 0px rgba(0, 0, 0, 0.26)
   z-index: 100
+  text-align: right
   +clearfix
   &__elem
     display: inline-block
@@ -15,8 +16,60 @@
     text-transform: uppercase
     color: #ffffff
     padding: 25px 0px
+    cursor: default
+    float: left
+    +media-880
+      padding: 30px 0px
+  &__burger
+    display: none
+    position: absolute
+    right: 46px
+    top: 18px
+    width: 51px
+    height: 43px
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+    +media-880
+      display: inline-block
+    span
+      display: block
+      position: absolute
+      height: 9px
+      width: 100%
+      background: $base-color-red
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      transform: rotate(0deg)
+      transition: .25s ease-in-out
+      &:nth-child(1)
+        top: 0px
+        transform-origin: left center
+
+      &:nth-child(2)
+        top: 17px
+        transform-origin: left center
+
+      &:nth-child(3)
+        top: 34px
+        transform-origin: left center
+    &.open
+      span
+        &:nth-child(1)
+          transform: rotate(45deg)
+          top: 0px
+          left: 8px
+
+        &:nth-child(2)
+          width: 0%
+          opacity: 0
+
+        &:nth-child(3)
+          transform: rotate(-45deg)
+          top: 36px
+          left: 8px
   &__main-menu
-    margin-left: 245px
     font-size: 0px
   &__nav
     li
@@ -30,16 +83,29 @@
       font-size: 16px
       line-height: 24px
       display: inline-block
-      color: $base-color-red
+      color: #ffffff
       text-decoration: none
       padding: 25px 0px
       &:hover
+        color: $base-color-red
         text-decoration: none
+    &--desktop
+      +media-880
+        display: none
   &__tel
     margin-left: 50px
     a
+      display: inline-block
       font-family: 'Ubuntu Bold', sans-serif
-      font-size: 30px
+      font-size: 24px
       color: #ffffff
       line-height: 24px
       text-decoration: none
+      +media-880
+        font-size: 36px
+        padding: 27px 0
+        margin-right: 50px
+      +media-707
+        font-size: 22px
+    +media-640
+      display: none
