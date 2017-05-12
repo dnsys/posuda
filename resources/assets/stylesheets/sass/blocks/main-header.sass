@@ -1,9 +1,12 @@
 .main-header
   font-family: 'Ubuntu Regular', sans-serif
+  +media-750
+    text-align: center
   &__title
     font-family: 'PT Sans Bold', sans-serif
     line-height: 60px
     margin-bottom: 75px
+    text-shadow: 4px 5px 20px rgba(0, 0, 0, 0.19), 5px 6px 17px rgba(0, 0, 0, 0.2)
   &__list
     font-family: 'Ubuntu Bold', sans-serif
     list-style: disc
@@ -12,6 +15,24 @@
     color: #ffffff
     margin-left: 40px
     margin-bottom: 50px
+    text-shadow: 4px 5px 20px rgba(0, 0, 0, 0.19), 5px 6px 17px rgba(0, 0, 0, 0.2)
+    +media-750
+      text-align: left
     .small
       font-family: 'Ubuntu Regular', sans-serif
       font-size: 24px
+  &__leave-order
+    text-shadow: 4px 5px 20px rgba(0, 0, 0, 0.19), 5px 6px 17px rgba(0, 0, 0, 0.2)
+    &--desktop
+      +media-750
+        display: none
+    &--mobile
+      display: none
+      +media-750
+        display: block
+  &__we-will-call
+    text-align: center
+    margin-top: 25px
+    text-shadow: 4px 5px 20px rgba(0, 0, 0, 0.19), 5px 6px 17px rgba(0, 0, 0, 0.2)
+    +media-750
+      color: #606060 !important

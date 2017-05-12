@@ -7,6 +7,13 @@
     text-align: left
     text-transform: uppercase
     color: #000000
+    &--desktop
+      +media-750
+        display: none
+    &--mobile
+      +media-750
+        font-size: 24px
+        text-align: center
   &__site-link
     font-size: 18px
     margin-top: 35px
@@ -15,7 +22,27 @@
       color: #000000
       &:hover
         text-decoration: underline
+    &--desktop
+      +media-750
+        display: none
   &__form-group
     display: inline-block
     padding: 0px 12px
     width: (100% / 3)
+    &--input
+      +media-750
+        width: 50%
+    &--button
+      +media-750
+        width: 100%
+        margin-top: 20px
+  &__form-text
+    +media-750
+      display: none
+  &__logo-with-link
+    display: none
+    text-align: center
+    +media-750
+      padding-top: 50px
+      padding-bottom: 20px
+      display: block

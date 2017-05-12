@@ -1,9 +1,12 @@
 .block-call-to-action
   padding: 95px 0px
+  +media-750
+    text-align: center
   &__image-paper
     position: absolute
     left: 0
     bottom: -65px
+    width: 50%
     +media-750
       display: none
   &__title
@@ -16,6 +19,8 @@
       display: inline-block
       text-decoration: none
       padding: 15px 55px
+      +media-750
+        padding: 0
   &__description
     margin-top: 30px
     a

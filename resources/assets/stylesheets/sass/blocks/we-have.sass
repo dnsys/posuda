@@ -1,13 +1,23 @@
 .we-have
-  padding: 115px 0px
+  padding: 95px 0
   position: relative
+  +media-750
+    text-align: center
   &__text
     margin-top: 75px
+    +media-750
+      display: none
   &__call-manager
     padding-top: 70px
     a
       display: inline-block
-      padding: 15px 25px
       text-decoration: none
+    &--desktop
+      +media-750
+        display: none
+    &--mobile
+      display: none
+      +media-750
+        display: block
   &__video-block
     padding-top: 15%

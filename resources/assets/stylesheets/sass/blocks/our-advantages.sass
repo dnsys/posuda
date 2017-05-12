@@ -1,10 +1,13 @@
 .our-advantages
   text-align: center
+  padding-bottom: 40px
   z-index: 3
   &__title
     margin-bottom: 20px
   &__item
     font-size: 0px
+    +media-750
+      padding: 50px 0px
   &__item-count
     display: inline-block
     height: 228px
@@ -14,6 +17,8 @@
     width: 30%
     opacity: .05
     vertical-align: middle
+    +media-750
+      height: 198px
   &__item-text
     display: inline-block
     position: relative

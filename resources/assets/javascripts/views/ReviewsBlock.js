@@ -7,13 +7,13 @@ class ReviewsBlock{
     constructor () {
         console.log('inside');
         $('.reviews-carousel').owlCarousel({
-            //items: 1,
+            items: 1,
             dots: true,
-            center: true,
-            loop: false,
-            margin: 24,
-            autoWidth: true,
-            //autoHeight:true
+            autoHeight:true,
+            //center: true,
+            //loop: false,
+            //margin: 24,
+            //autoWidth: true,
         });
     }
 }

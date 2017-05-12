@@ -18,9 +18,10 @@ class ReviewsBlock{
             loop:true,
             margin:10,
             autoplay:true,
-            autoplayTimeout:500,
-            autoplayHoverPause:true,
-            autoplaySpeed: 5000
+            autoplayTimeout:0,
+            //autoplayHoverPause:true,
+            autoplaySpeed: 5000,
+            slideTransition: 'linear'
         });
     }
 }

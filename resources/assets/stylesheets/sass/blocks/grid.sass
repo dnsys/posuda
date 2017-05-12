@@ -4,9 +4,12 @@
   padding-right: 12px
   margin: 0 auto
   +clearfix
-  +media-880
-    padding-left: 12%
-    padding-right: 12%
+  +media-1152
+    padding-left: 2.5%
+    padding-right: 2.5%
+  +media-750
+    padding-left: 13%
+    padding-right: 13%
 
 .row
   margin-left: -12px
@@ -15,20 +18,37 @@
 
 $col-count: 8
 $col-with: 100% / $col-count
-@for $i from 1 through $col-count
+@for $i from 0 through $col-count
   .column-#{$i}
     float: left
     padding-left: 12px
     padding-right: 12px
     width: $col-with * $i
-    +media-320
-      width: 100%
 
-@for $i from 1 through $col-count
+  .column-md-#{$i}
+    +media-1080
+      float: left
+      padding-left: 12px
+      padding-right: 12px
+      width: $col-with * $i
+
+
+  .column-sm-#{$i}
+    +media-750
+      float: left
+      padding-left: 12px
+      padding-right: 12px
+      width: $col-with * $i
+
+
+@for $i from 0 through $col-count
   .column-offset-left-#{$i}
     margin-left: $col-with * $i
-    +media-320
-      margin-left: 0px
+
+@for $i from 0 through $col-count
+  .column-sm-offset-left-#{$i}
+    +media-750
+      margin-left: $col-with * $i
 
 @for $i from 1 through $col-count
   .column-offset-right-#{$i}

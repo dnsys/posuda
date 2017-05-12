@@ -8,11 +8,15 @@
       color: #000000
   &--main
     height: 950px
+    background-image: url('../images/main-bg.jpg')
     background-size: cover
     background-repeat: no-repeat
     background-position: bottom center
     margin-top: -75px
+    +media-750
+      background-image: url('../images/main-bg-mobile.jpg')
   &--we-have
+    background: url('./images/bg-we-have.jpg')
     background-position: center
     background-size: cover
     &:before
@@ -25,6 +29,12 @@
       left: 0
       background: $color-dark-blue
       opacity: .9
+      +media-750
+        background: none
+    +media-750
+      background: none
+      h1, h2, p
+        color: #000000
   &--table
     display: table
     table-layout: fixed
@@ -36,7 +46,9 @@
 
   &--call-to-action
     background: $color-dark-blue
-
+  &--how-we-work
+    +media-750
+      display: none
   &--for-partners
     background: $color-dark-blue
     &:before
@@ -52,3 +64,5 @@
       background-position: center
       background-position-x: 120%
       opacity: .7
+      +media-750
+        background: none
