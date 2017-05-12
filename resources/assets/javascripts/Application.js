@@ -13,7 +13,13 @@ class Application{
              new PartnersBlock();
              new Rellax('.rellax');
             $('.header__burger').click(function(){
-                $(this).toggleClass('open');
+                let $this = $(this);
+                $this.toggleClass('open');
+                $('.header__main-menu--mobile').each(function () {
+                    if( $this.hasClass('clone') !== true ){
+                        $this.toggleClass('open');
+                    }
+                });
             });
             this._initSmothScroll();
         })

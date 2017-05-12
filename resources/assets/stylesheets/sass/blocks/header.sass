@@ -80,6 +80,14 @@ body.down header.clone
           left: 8px
   &__main-menu
     font-size: 0px
+    &--mobile
+      display: none
+      margin-left: -6%
+      margin-right: -6%
+      &.open
+        display: inline-block
+        .header.clone
+          top: 0
   &__nav
     li
       display: inline-block
@@ -95,12 +103,23 @@ body.down header.clone
       color: #ffffff
       text-decoration: none
       padding: 25px 0px
+      +media-880
+        font-size: 36px
+        padding: 35px 0px
       &:hover
         color: $base-color-red
         text-decoration: none
     &--desktop
       +media-880
         display: none
+    &--mobile
+      li
+        width: 100%
+        border-top: 1px solid #1f1f25
+        border-left: none
+        &:last-child
+          border-right: none
+        a
   &__tel
     margin-left: 50px
     a
@@ -113,6 +132,8 @@ body.down header.clone
       +media-880
         font-size: 36px
         padding: 27px 0
+        margin-right: 100px
+      +media-750
         margin-right: 50px
       +media-707
         font-size: 22px
