@@ -8,6 +8,7 @@ class Application{
     constructor(){
         console.log('application start');
         document.addEventListener('DOMContentLoaded', () => {
+             this._initStickyHeader();
              new ReviewsBlock();
              new PartnersBlock();
              new Rellax('.rellax');
@@ -19,6 +20,16 @@ class Application{
     }
     _initSmothScroll(){
         this._scrollSpeed = $.scrollSpeed(100, 1500);
+    }
+
+    _initStickyHeader() {
+        let $header = $("header"),
+            $clone = $header.before($header.clone().addClass("clone"));
+
+        $(window).on("scroll", function() {
+            let fromTop = $("body").scrollTop();
+            $('body').toggleClass("down", (fromTop > 200));
+        });
     }
 }
 

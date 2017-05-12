@@ -4,10 +4,18 @@
     display: none
   &__item
     text-align: center
+    cursor: pointer
+    .st0
+      transition: .3s all
+    &:hover
+      .st0
+        fill: $base-color-red
   &__item-icon
     height: 93px
     background-position: bottom center
     background-repeat: no-repeat
+
+
   &__item-title
     font-family: 'Ubuntu Medium', sans-serif
     font-size: 18px

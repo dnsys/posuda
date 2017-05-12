@@ -1,3 +1,5 @@
+body.down header.clone
+  top: 0
 .header
   position: relative
   background: $color-dark-blue
@@ -6,6 +8,13 @@
   z-index: 100
   text-align: right
   +clearfix
+  &.clone
+    position: fixed
+    top: -75px
+    left: 0
+    right: 0
+    z-index: 999
+    transition: 0.2s top cubic-bezier(.3,.73,.3,.74)
   &__elem
     display: inline-block
     vertical-align: middle

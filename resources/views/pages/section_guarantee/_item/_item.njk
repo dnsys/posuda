@@ -1,7 +1,8 @@
 <div class="column-2 {{ item.offset }}">
     <div class="guarantee__item">
-        <div class="guarantee__item-icon" style="background-image: url('{{ item.imageUrl }}')">
-
+        <div class="guarantee__item-icon">
+            {#<img src="{{ item.imageUrl }}" alt="" class="{{ item.classImage }}">#}
+            {{ item.svgImage | safe }}
         </div>
         <div class="guarantee__item-title">
             {{ item.title }}
