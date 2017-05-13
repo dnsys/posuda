@@ -8,18 +8,18 @@ class Application{
     constructor(){
         console.log('application start');
         document.addEventListener('DOMContentLoaded', () => {
-             this._initStickyHeader();
+             //this._initStickyHeader();
              new ReviewsBlock();
              new PartnersBlock();
              new Rellax('.rellax');
             $('.header__burger').click(function(){
                 let $this = $(this);
                 $this.toggleClass('open');
-                $('.header__main-menu--mobile').each(function () {
-                    if( $this.hasClass('clone') !== true ){
-                        $this.toggleClass('open');
-                    }
-                });
+                // $('.header__main-menu--mobile').each(function () {
+                //     if( $this.hasClass('clone') !== true ){
+                //         $this.toggleClass('open');
+                //     }
+                // });
             });
             this._initSmothScroll();
         })
@@ -28,7 +28,7 @@ class Application{
         this._scrollSpeed = $.scrollSpeed(100, 1500);
     }
 
-    _initStickyHeader() {
+    /*_initStickyHeader() {
         let $header = $("header"),
             $clone = $header.before($header.clone().addClass("clone"));
 
@@ -36,7 +36,7 @@ class Application{
             let fromTop = $("body").scrollTop();
             $('body').toggleClass("down", (fromTop > 200));
         });
-    }
+    }*/
 }
 
 new Application();

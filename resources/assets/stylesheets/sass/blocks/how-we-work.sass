@@ -2,5 +2,24 @@
   padding: 110px 0px
   &__title
     margin-bottom: 90px
-  &__image
+  &__image-line
     max-width: 100%
+    margin: 25px 0px
+  &__item
+    text-align: center
+    cursor: pointer
+    .st0
+      fill: #cccccc
+      transition: .3s all
+    &:hover
+      .st0
+        fill: $base-color-red
+  &__item-icon
+    height: 93px
+    &--bottom
+      margin-top: 30px
+  &__item-text
+    margin-top: 30px
+    line-height: 24px
+    &--bottom
+      margin-top: 0px
