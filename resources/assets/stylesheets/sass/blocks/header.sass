@@ -1,5 +1,5 @@
-body.down header.clone
-  top: 0
+//body.down header.clone
+//  top: 0
 .header
   position: relative
   background: $color-dark-blue
@@ -8,13 +8,16 @@ body.down header.clone
   z-index: 100
   text-align: right
   +clearfix
-  &.clone
+  &--clone
     position: fixed
-    top: -75px
+    //top: -75px
     left: 0
     right: 0
     z-index: 999
-    transition: 0.2s top cubic-bezier(.3,.73,.3,.74)
+    transition: all 300ms ease-in-out
+    transform: translateY(-100%)
+  &--stick
+    transform: translateY(0%)
   &__elem
     display: inline-block
     vertical-align: middle
@@ -81,6 +84,11 @@ body.down header.clone
   &__main-menu
     font-size: 0px
     &--mobile
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      background: $color-dark-blue
       display: none
       margin-left: -6%
       margin-right: -6%
