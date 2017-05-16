@@ -15,7 +15,7 @@
                         <div class="column-6 column-md-6 column-sm-8">
                             <p class="main-header__leave-order main-header__leave-order--desktop">Оставьте заявку прямо сейчас и получите 10% скидку!</p>
                             <p class="main-header__leave-order main-header__leave-order--mobile">Оставьте заявку прямо сейчас<br/>и получите 10% скидку!</p>
-                            <form action="" name="call-back-form">
+                            <form action="call-to-manager.php" name="call-back-form" class="call-back-form">
                                 <div class="row">
                                     <div class="column-4 column-xs-8">
                                         <input type="text" name="name" placeholder="Имя">
@@ -24,9 +24,10 @@
                                         <input type="text" name="phone" placeholder="Телефон">
                                     </div>
                                     <div class="column-8">
-                                        <button id="submit-form" class="btn-base-red" style="width: 100%; margin-top: 25px">Обратный звонок</button>
+                                        <input type="submit" id="submit-form" class="btn-base-red" style="width: 100%; margin-top: 25px" value="Обратный звонок">
                                     </div>
                                 </div>
+                                <div class="sent-success sent-success--dark">Спасибо! Ваша заявка принята.</div>
                             </form>
                             <p class="main-header__we-will-call">Мы перезвоним в течении 15 минут!</p>
                         </div>

@@ -1,5 +1,5 @@
 .block-reviews
-  padding: 95px 0px
+  padding: 95px 0px 20px
   +media-750
     display: none
   &__item
@@ -34,3 +34,25 @@
     margin-top: 35px
   .reviews-carousel.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
       background: $base-color-red
+  .owl-nav
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    max-width: 1000px
+    +clearfix
+    .owl-prev, .owl-next
+      width: 50px
+      height: 50px
+      i
+        margin-top: 8px
+        font-size: 30px
+    .owl-prev
+      float: left
+      i
+        margin-right: 6px
+    .owl-next
+      float: right
+      i
+        margin-left: 6px

@@ -1,0 +1,28 @@
+.modal-window
+  &.mfp-bg
+    opacity: 0
+    transition: all 0.15s ease-out
+  &.mfp-bg.mfp-ready
+    opacity: 0.8
+  &.mfp-bg.mfp-removing
+    opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      transition: all 0.15s ease-out
+  &.mfp-wrap.mfp-ready
+    .mfp-content
+      opacity: 1
+  &.mfp-wrap.mfp-removing
+    .mfp-content
+      opacity: 0
+
+  &__wrapper
+    position: relative
+    max-width: 430px
+    background: #ffffff
+    border-radius: 5px
+    box-shadow: 10px 12px 28px 0px rgba(0, 0, 0, 0.22), 16px 19px 55px 0px rgba(0, 0, 0, 0.21)
+    text-align: center
+    padding: 50px 83px
+    margin: 0 auto

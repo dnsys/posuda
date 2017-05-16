@@ -11,7 +11,7 @@
             </div>
             <div class="column-5 column-sm-8 column-offset-left-1 column-sm-offset-left-0">
                 <p class="footer__form-text">Оставьте заявку прямо сейчас и получите 10% скидку!</p>
-                <form action="" name="call-back-footer">
+                <form action="call-to-manager.php" class="call-back-form" method="post">
                     <div class="row">
                         <div class="footer__form-group footer__form-group--input">
                             <input type="text" name="name" placeholder="Имя">
@@ -20,8 +20,9 @@
                             <input type="text" name="phone" placeholder="Телефон">
                         </div>
                         <div class="footer__form-group footer__form-group--button">
-                            <button class="btn-base-red" style="width: 100%;">Обратный звонок</button>
+                            <input type="submit" name="submit" class="btn-base-red" style="width: 100%;" value="Обратный звонок">
                         </div>
+                        <div class="sent-success sent-success--light">Спасибо! Ваша заявка принята.</div>
                     </div>
                 </form>
             </div>

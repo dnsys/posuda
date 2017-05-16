@@ -16,7 +16,7 @@ class ReviewsBlock{
             // autoplaySpeed: 5000
             items:7,
             loop:true,
-            margin:10,
+            margin:20,
             autoplay:true,
             autoplayTimeout:0,
             //autoplayHoverPause:true,

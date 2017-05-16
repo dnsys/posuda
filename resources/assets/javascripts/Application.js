@@ -5,6 +5,7 @@ import Rellax from 'rellax'
 import './vendor/jQuery.scrollSpeed'
 //import Headhesive from 'headhesive'
 import './vendor/anchor'
+import magnificPopup from 'magnific-popup'
 
 class Application{
     constructor(){
@@ -27,6 +28,8 @@ class Application{
             });
             this._initSmothScroll();
             this._initStickyHeader();
+            this._initPopup();
+            this._ajaxSendForm();
         })
     }
     _initSmothScroll(){
@@ -34,37 +37,49 @@ class Application{
     }
 
     _initStickyHeader() {
-        //let $header = $("header");
-        //     $clone = $header.before($header.clone().addClass("clone"));
-        //
-        // $(window).on("scroll", function() {
-        //     let fromTop = $("body").scrollTop();
-        //     $('body').toggleClass("down", (fromTop > 200));
-        // });
-        ////////////////////////////////////////////
-        // let options = {
-        //     offset: 200,
-        //     classes: {
-        //
-        //         // Cloned elem class
-        //         clone: 'header--clone',
-        //
-        //         // Stick class
-        //         stick: 'header--stick',
-        //
-        //         // Unstick class
-        //         unstick: 'header--unstick'
-        //     }
-        // }
-        // let header = header = new Headhesive('.header', options);
-        // if(screen.width < 880){
-        //     header.destroy();
-        // }
         let $header = $('.header');
         $(window).on("scroll", function() {
             if ($(window).scrollTop() > 150) $header.addClass('header--stick animated slideInDown').removeClass('slideInUp');
             //else if ($(window).scrollTop() > 150 ) $header.addClass('header--stick');
             else $header.removeClass('header--stick slideInDown').addClass('slideInUp');
+        });
+    }
+
+    _initPopup() {
+        $('.link-popup-call-manager').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            focus: '#name',
+            mainClass: 'modal-window'
+        });
+
+        $('.link-get-price-form').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            focus: '#email',
+            mainClass: 'modal-window'
+        });
+    }
+
+    _ajaxSendForm() {
+        $('.call-back-form').submit(function(e) {
+            let $form = $(this);
+            $.ajax({
+                type: $form.attr('method'),
+                url: '../call-to-manager.php',
+                data: $form.serialize()
+            }).done(function() {
+                $form.find('.sent-success').show('fast');
+                $form.find('input[type=submit]').prop('disabled', true);
+                setTimeout(function () {
+                    $form.find('input[type=submit]').prop('disabled', false);
+                    $form.find('.sent-success').hide('fast');
+                }, 3000);
+            }).fail(function() {
+                console.log('fail');
+            });
+            //отмена действия по умолчанию для кнопки submit
+            e.preventDefault();
         });
     }
 }
