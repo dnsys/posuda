@@ -81,6 +81,25 @@ class Application{
             //отмена действия по умолчанию для кнопки submit
             e.preventDefault();
         });
+        $('#getPriceForm').submit(function(e) {
+            let $form = $(this);
+            $.ajax({
+                type: $form.attr('method'),
+                url: '../get-price.php',
+                data: $form.serialize()
+            }).done(function() {
+                $form.find('.sent-success').show('fast');
+                $form.find('input[type=submit]').prop('disabled', true);
+                setTimeout(function () {
+                    $form.find('input[type=submit]').prop('disabled', false);
+                    $form.find('.sent-success').hide('fast');
+                }, 3000);
+            }).fail(function() {
+                console.log('fail');
+            });
+            //отмена действия по умолчанию для кнопки submit
+            e.preventDefault();
+        });
     }
 }
 
