@@ -26,15 +26,15 @@ class Application{
                 $this.toggleClass('open');
                 $mobileMenu.toggleClass('open animated fadeInBottom');
             });
-            this._initSmothScroll();
+            //this._initSmothScroll();
             this._initStickyHeader();
             this._initPopup();
             this._ajaxSendForm();
         })
     }
-    _initSmothScroll(){
-        this._scrollSpeed = $.scrollSpeed(100, 1500);
-    }
+    // _initSmothScroll(){
+    //     this._scrollSpeed = $.scrollSpeed(100, 1500);
+    // }
 
     _initStickyHeader() {
         let $header = $('.header');
