@@ -3,11 +3,21 @@
   +media-750
     display: none
   .partners-carousel
-    .owl-item
-      float: none
-      display: inline-block
+    &__item
+      display: table-cell
       vertical-align: middle
+    .owl-stage
+      height: 115px
+    .owl-item
+      height: 115px
+      display: table
+      //float: none
+      //display: inline-block
+      //vertical-align: middle
       img
+        max-width: 100%
+        width: auto
+        max-height: 115px
         filter: grayscale(100%)
         opacity: .7
         transition: .3s all
