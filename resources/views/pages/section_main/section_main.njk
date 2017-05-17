@@ -4,10 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="column-4 column-md-6 column-sm-8">
-                        <h1 class="main-header__title">
-                            Посуда оптом
-                            от производителя!
-                        </h1>
+                        <div class="main-header__title">
+                            <h1>Посуда оптом</h1>
+                            <br/>
+                            <span>от производителя!</span>
+                        </div>
                         <ul class="main-header__list">
                             <li>Фарфор от <span class="red-bold">175 &#8381;</span> <span class="small">за тарелку</span></li>
                             <li>Опал от <span class="red-bold">2875 &#8381;</span> <span class="small">за набор</span></li>
@@ -15,13 +16,13 @@
                         <div class="column-6 column-md-6 column-sm-8">
                             <p class="main-header__leave-order main-header__leave-order--desktop">Оставьте заявку прямо сейчас и получите 10% скидку!</p>
                             <p class="main-header__leave-order main-header__leave-order--mobile">Оставьте заявку прямо сейчас<br/>и получите 10% скидку!</p>
-                            <form action="call-to-manager.php" name="call-back-form" class="call-back-form">
+                            <form action="call-to-manager.php" name="call-back-form" class="call-back-form" method="post">
                                 <div class="row">
                                     <div class="column-4 column-xs-8">
-                                        <input type="text" name="name" placeholder="Имя">
+                                        <input type="text" name="name" placeholder="Имя" required="required">
                                     </div>
                                     <div class="column-4 column-xs-8">
-                                        <input type="text" name="phone" placeholder="Телефон">
+                                        <input type="text" name="phone" placeholder="Телефон" required="required">
                                     </div>
                                     <div class="column-8">
                                         <input type="submit" id="submit-form" class="btn-base-red" style="width: 100%; margin-top: 25px" value="Обратный звонок">

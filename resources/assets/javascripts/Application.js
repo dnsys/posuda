@@ -27,9 +27,9 @@ class Application{
                 $mobileMenu.toggleClass('open animated fadeInBottom');
             });
             //this._initSmothScroll();
-            this._initStickyHeader();
             this._initPopup();
             this._ajaxSendForm();
+            this._initStickyHeader();
         })
     }
     // _initSmothScroll(){
